@@ -8,7 +8,7 @@ cities.forEach(function(city) {
         radius:city.population/100000,
         color: "orange"
 })
-.bindPopup("<h2>" + city.city + ", " + city.state + "</h2> <hr> <h3>Population " + city.population + "</h3>")
+
   .addTo(map);
 });
   
@@ -19,3 +19,6 @@ let streets = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/dark-v10/tile
 });
 // Then we add our 'graymap' tile layer to the map.
 streets.addTo(map);
+
+
+//.bindPopup("<h2>" + city.city + ", " + city.state + "</h2> <hr> <h3>Population " + city.population + "</h3>")
