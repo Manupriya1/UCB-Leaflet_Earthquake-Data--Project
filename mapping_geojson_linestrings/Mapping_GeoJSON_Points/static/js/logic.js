@@ -27,7 +27,7 @@ let baseMaps = {
     layers: [light]
 });
 L.control.layers(baseMaps).addTo(map);
-let torontoData = "https://raw.githubusercontent.com/<GitHub_name>/Mapping_Earthquakes/main/torontoRoutes.json";
+let torontoData = "https://raw.githubusercontent.com/Manupriya1/UCB-Leaflet_Earthquake-Data--Project/Mapping_GeoJSON_Linestrings/torontoRoutes.json";
 
 
 
