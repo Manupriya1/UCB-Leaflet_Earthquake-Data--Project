@@ -18,22 +18,22 @@ attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap
     accessToken: API_KEY
 });
 let baseMaps = {
-    street: streetst,
+    street: streets,
     satelite: satelliteStreets
   };
   let map = L.map('mapid', {
     center: [43.7, -79.3],
     zoom: 11,
-    layers: [light]
+    layers: [streets]
 });
 L.control.layers(baseMaps).addTo(map);
-let torontoData = "https://raw.githubusercontent.com/Manupriya1/UCB-Leaflet_Earthquake-Data--Project/Mapping_GeoJSON_Linestrings/torontoRoutes.json";
+let torontoHoods = "https://raw.githubusercontent.com/Manupriya1/UCB-Leaflet_Earthquake-Data--Project/main/torontoNeighborhoods.json";
 
 
 
 
 // Then we add our 'graymap' tile layer to the map.
-d3.json(torontoData).then(function(data) {
+d3.json(torontoHoods).then(function(data) {
   console.log(data);
 // Creating a GeoJSON layer with the retrieved data.
 L.geoJson(data).addTo(map);
